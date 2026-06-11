@@ -1,0 +1,29 @@
+{
+  "min_overall_score": 0.75,
+  "cases": [
+    {
+      "file": "sample_en.txt",
+      "expected_title": "Attention",
+      "language": "en",
+      "page_count": 11,
+      "min_score": 0.9,
+      "required_sections": ["background", "method", "results", "conclusion"]
+    },
+    {
+      "file": "sample_zh.txt",
+      "expected_title": "中文序列建模",
+      "language": "zh",
+      "page_count": 11,
+      "min_score": 0.75,
+      "required_sections": ["background", "method", "results", "conclusion"]
+    },
+    {
+      "file": "sample_en_short.txt",
+      "expected_title": "BERT",
+      "language": "en",
+      "page_count": 11,
+      "min_score": 0.7,
+      "required_sections": ["background", "method", "results"]
+    }
+  ]
+}

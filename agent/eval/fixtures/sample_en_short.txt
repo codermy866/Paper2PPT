@@ -1,0 +1,19 @@
+Title: BERT: Pre-training of Deep Bidirectional Transformers
+
+Abstract
+We introduce BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike previous models, BERT is designed to pre-train deep bidirectional representations from unlabeled text.
+
+1. Introduction
+Language model pre-training has improved many NLP tasks. BERT uses masked language modeling and next sentence prediction.
+
+2. Method
+BERT uses a multi-layer bidirectional Transformer encoder. We pre-train on BooksCorpus and English Wikipedia with masked LM and NSP objectives.
+
+3. Experiments
+We fine-tune BERT on GLUE, SQuAD, and SWAG. Hyperparameters include batch size 256, Adam with learning rate 1e-4, and 1M training steps.
+
+4. Results
+BERT-base and BERT-large outperform prior state-of-the-art on eleven NLP tasks, including large gains on SQuAD and GLUE benchmarks.
+
+5. Conclusion
+Bidirectional pre-training enables strong transfer learning for downstream NLP applications.

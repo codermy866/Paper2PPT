@@ -1,0 +1,19 @@
+Title: Attention Is All You Need
+
+Abstract
+The dominant sequence transduction models are based on complex recurrent or convolutional neural networks. We propose the Transformer, a model architecture eschewing recurrence and relying entirely on attention mechanisms.
+
+1. Introduction
+Sequence modeling has been dominated by RNNs. The Transformer addresses long-range dependency problems with self-attention.
+
+2. Method
+We use multi-head attention, positional encoding, and stacked encoder-decoder layers. Each layer applies scaled dot-product attention followed by feed-forward networks.
+
+3. Experiments
+We evaluate on WMT 2014 English-to-German and English-to-French translation tasks. Our model achieves new state-of-the-art BLEU scores while being more parallelizable.
+
+4. Results
+The Transformer base model outperforms previous best results on both translation benchmarks with significantly less training cost.
+
+5. Conclusion
+Attention-only architectures are effective for sequence transduction and offer strong performance with improved training efficiency.

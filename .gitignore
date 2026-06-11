@@ -1,0 +1,27 @@
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.tmp
+
+# Python virtual environment
+agent/.venv/
+**/__pycache__/
+*.pyc
+
+# Frontend dependencies/build outputs
+frontend/node_modules/
+frontend/dist/
+
+# Runtime generated artifacts
+agent/runtime/output/
+agent/runtime/outputs/
+agent/runtime/inputs/
+agent/runtime/cache/
+agent/runtime/tasks.db
+agent/runtime/templates/
+agent/runtime/tesseract/
+agent/runtime/logs/
+agent/runtime/settings.json
+.claude/
+agent/output/

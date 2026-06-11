@@ -1,0 +1,19 @@
+Paper2Slides: An Agent Pipeline for Automatic Academic Presentation Generation
+
+Abstract
+Academic researchers often spend significant time converting a paper into a presentation. This work studies how to automatically transform a research paper into an editable slide deck. We propose an agent pipeline that parses paper text, identifies rhetorical sections, plans presentation structure, and generates slide content. Our approach focuses on reliability and editability rather than fully autonomous design. Experiments on representative computer science papers show that the pipeline can produce concise 6-slide presentations with useful coverage of background, method, setup, results, and conclusion.
+
+1 Introduction
+Preparing a presentation from a research paper is repetitive and time-consuming. Authors must identify the research problem, summarize the method, select experimental details, and communicate results clearly. Existing generic summarization systems often ignore the structure required by academic presentations. We therefore formulate paper-to-presentation generation as an agent workflow with explicit intermediate representations.
+
+2 Method
+The proposed system consists of five modules. First, a parser extracts raw text and metadata from the PDF. Second, a classifier identifies abstract, background, method, experiment setup, results, and conclusion. Third, a planner creates a slide outline with six pages. Fourth, a generator produces bullet points and speaker notes for each page. Finally, a PPT builder writes editable slides using a fixed academic template. This modular design improves debugging and future extensibility.
+
+3 Experimental Setup
+We evaluate the system on a small benchmark of machine learning and natural language processing papers. Each generated presentation is inspected for structural completeness, faithfulness, and conciseness. We compare the modular agent pipeline with a single-step summarization baseline. The implementation uses simple heuristics in the MVP stage and leaves room for future LLM enhancement.
+
+4 Results
+The agent pipeline consistently produces presentations with clearer slide organization than the baseline. Background and method slides are more complete, and conclusion slides better reflect the paper's final claims. Users also report that editable PPTX output is more practical than markdown summaries because it reduces manual post-processing time.
+
+5 Conclusion
+This paper presents a practical MVP for automatic academic presentation generation. The results suggest that explicit task decomposition is a strong foundation for future work. In the next stage, figure extraction, style templates, and interactive editing can be integrated into the same agent framework.

@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+  web:
+    build: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8080:80"
+    restart: unless-stopped

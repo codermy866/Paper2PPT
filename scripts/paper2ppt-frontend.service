@@ -1,0 +1,16 @@
+[Unit]
+Description=Paper2PPT frontend dev server (port 5173)
+After=network-online.target paper2ppt-api.service
+Wants=paper2ppt-api.service
+
+[Service]
+Type=simple
+WorkingDirectory=/data2/hmy_pri/paper2ppt/frontend
+ExecStart=@NODE@ node_modules/vite/bin/vite.js --host 0.0.0.0 --port 5173
+Restart=always
+RestartSec=5
+StandardOutput=append:/data2/hmy_pri/paper2ppt/agent/runtime/logs/frontend.log
+StandardError=append:/data2/hmy_pri/paper2ppt/agent/runtime/logs/frontend.log
+
+[Install]
+WantedBy=default.target
